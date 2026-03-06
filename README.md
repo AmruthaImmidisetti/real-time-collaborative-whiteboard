@@ -192,6 +192,37 @@ This will start:
 
 ---
 
+## Accessing the Whiteboard
+
+After starting the application, open the whiteboard in your browser.
+
+### Home Page
+
+http://localhost:3000
+
+This page displays the main entry of the application.
+
+### Collaborative Whiteboard Room
+
+http://localhost:3000/board/test-room
+
+When a user navigates to `/board/:boardId`, the frontend connects to the
+WebSocket server and joins a collaborative room corresponding to the
+board ID.
+
+Inside this room, multiple users can:
+
+-   Draw on the canvas using the **pen tool**
+-   Create **rectangle shapes**
+-   See **real-time cursor movements**
+-   View **active users in the room**
+-   Perform **undo and redo actions**
+
+All drawing actions and object creations are synchronized in real-time
+using **Socket.IO**.
+
+---
+
 # API Endpoints
 
 ## Health Check
